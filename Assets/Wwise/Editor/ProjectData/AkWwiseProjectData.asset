@@ -40,15 +40,36 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 6f8eea8eae0b234fbcc4ed79070e4787
     GuidInternal: 
-    m_lastTime: -8586145910920744385
-    List: []
+    m_lastTime: -8586145320737165084
+    List:
+    - name: New_SoundBank
+      guid: 29afceafb46c8742af382646af8d322a
+      id: 4072029455
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: New_SoundBank
+        ObjectType: 7
+      Path: Default Work Unit\New_SoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: c3fea915a3e6ed4d868ab74e6811913b
     GuidInternal: 
-    m_lastTime: -8586145910920854085
-    List: []
+    m_lastTime: -8586145320737065418
+    List:
+    - name: sound_test_event
+      guid: 34a5ca871823f847abe8e96274435b5e
+      id: 3784817608
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: sound_test_event
+        ObjectType: 3
+      Path: Default Work Unit\sound_test_event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -61,14 +82,33 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a3dc5ca88eb43d478d1f795b96eed2df
     GuidInternal: 
-    m_lastTime: -8586145910920614726
-    List: []
+    m_lastTime: -8586145433955197228
+    List:
+    - name: New_State_Group
+      guid: e5bc98b83a7bb0468f3d8fa26dcb9632
+      id: 2012657067
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: New_State_Group
+        ObjectType: 9
+      Path: Default Work Unit\New_State_Group
+      values:
+      - name: None
+        guid: 3a05d23a58403a458edaf3a96434ccda
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 1f50dc5eb9eacd439ce8c1c8935b8384
     GuidInternal: 
-    m_lastTime: -8586145910920784278
+    m_lastTime: -8586145433955237133
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -79,5 +119,9 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /ld46_WwiseProject
+  - /ld46_WwiseProject/Events
+  - /ld46_WwiseProject/Events/Default Work Unit
+  - /ld46_WwiseProject/SoundBanks
+  - /ld46_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

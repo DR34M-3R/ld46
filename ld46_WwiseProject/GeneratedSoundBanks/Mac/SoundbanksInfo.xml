@@ -20,6 +20,16 @@
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3784817608" Name="sound_test_event" ObjectPath="\Events\Default Work Unit\sound_test_event" DurationType="OneShot" DurationMin="0.462132" DurationMax="0.462132">
+					<IncludedMemoryFiles>
+						<File Id="984028179" Language="SFX">
+							<ShortName>Explosion.wav</ShortName>
+							<Path>SFX\Explosion_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

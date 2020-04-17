@@ -11,6 +11,11 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID SOUND_TEST_EVENT = 3784817608U;
+    } // namespace EVENTS
+
     namespace STATES
     {
         namespace NEW_STATE_GROUP

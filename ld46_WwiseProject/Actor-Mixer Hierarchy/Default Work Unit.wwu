@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{EA42847B-C269-4A48-B150-E1982524F5B5}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="Explosion" ID="{35E422FB-DDD3-44EB-8312-F6307EF1C194}" ShortID="473468790">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{84E91CDD-A390-49A5-889C-EF69F3652D02}"/>
