@@ -1,6 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	3784817608	sound_test_event			\Default Work Unit\sound_test_event	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	984028179	Explosion	C:\Users\User\Documents\projects\ld46\ld46_WwiseProject\.cache\Windows\SFX\Explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Explosion		40824
-
