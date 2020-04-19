@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
     private PauseView _pauseView;
     private void Start()
     {
+        Time.timeScale = 1;
         _pauseView = GetComponent<PauseView>();
         _pauseView.IsActive = false;
     }
@@ -20,4 +21,6 @@ public class Pause : MonoBehaviour
             _pauseView.IsActive = !_pauseView.IsActive;
         }
     }
+    
+    
 }

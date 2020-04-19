@@ -5,5 +5,6 @@ namespace Events
         public const string DAMAGE_RECEIVED = "damage_received";
         public const string HEALED = "healed";
         public const string DIED = "died";
+        public const string CHANGED = "changed";
     }
 }

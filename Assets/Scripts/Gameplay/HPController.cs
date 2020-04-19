@@ -19,6 +19,7 @@ namespace Gameplay
 
             _eventSystem.AddListener(HPEvent.DAMAGE_RECEIVED, OnDamageReceived);
             _eventSystem.AddListener(HPEvent.HEALED, OnHealed);
+            
         }
 
         void OnHealed(EventData e)
@@ -27,10 +28,12 @@ namespace Gameplay
             float hpCount = Convert.ToSingle(e.Data);
             CurrentHP += hpCount;
             
-            if (CurrentHP > _stats.HP)
+            if (CurrentHP > _stats.hp)
             {
-                CurrentHP = _stats.HP;
+                CurrentHP = _stats.hp;
             }
+            
+            _eventSystem.Dispatch(HPEvent.CHANGED, CurrentHP);
         }
 
         void OnDamageReceived(EventData e)
@@ -45,7 +48,10 @@ namespace Gameplay
                     CurrentHP = 0;
                     _eventSystem.Dispatch(HPEvent.DIED);
                 }
+                _eventSystem.Dispatch(HPEvent.CHANGED, CurrentHP);
             }
         }
+
+
     }
 }
