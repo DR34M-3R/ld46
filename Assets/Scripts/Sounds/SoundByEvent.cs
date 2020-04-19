@@ -1,9 +1,6 @@
-namespace Sounds
+[System.Serializable]
+public class SoundByEvent
 {
-    [System.Serializable]
-    public class SoundByEvent
-    {
-        public string EventType;
-        public string SoundName;
-    }
+    public string EventType;
+    public string SoundName;
 }

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using Events;
-using Sounds;
 using UnityEngine;
 
 public class SoundController : MonoBehaviour
@@ -26,10 +22,10 @@ public class SoundController : MonoBehaviour
         _eventSystem.AddListener(EventSystem.BROADCAST, TryPlaySound);
     }
 
-    public void TryPlaySound(EventData e)
+    private void TryPlaySound(EventData e)
     {
         var sound = SoundList.FirstOrDefault(soundData => soundData.EventType == e.Type);
-        
+
         if (sound != null)
         {
             var clip = _soundManager.GetSound(sound.SoundName);

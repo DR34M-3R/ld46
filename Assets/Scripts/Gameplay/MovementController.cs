@@ -26,13 +26,12 @@ public class MovementController : MonoBehaviour
         _eventSystem = GetComponent<EventSystem>();
 
         _eventSystem.AddListener(MovementEvent.JUMP, Jump);
-        _eventSystem.AddListener(MovementEvent.MOVING_LEFT_STARTED, OnMovingStarted);
-        _eventSystem.AddListener(MovementEvent.MOVING_LEFT_STOPPED, OnMovingStarted);
-        _eventSystem.AddListener(MovementEvent.MOVING_RIGHT_STARTED, OnMovingStarted);
-        _eventSystem.AddListener(MovementEvent.MOVING_RIGHT_STOPPED, OnMovingStarted);
+        _eventSystem.AddListener(MovementEvent.MOVING_LEFT_STARTED, OnMovingDirectionChanged);
+        _eventSystem.AddListener(MovementEvent.MOVING_STOPPED, OnMovingDirectionChanged);
+        _eventSystem.AddListener(MovementEvent.MOVING_RIGHT_STARTED, OnMovingDirectionChanged);
     }
 
-    private void OnMovingStarted(EventData e)
+    private void OnMovingDirectionChanged(EventData e)
     {
         switch (e.Type)
         {
@@ -43,73 +42,70 @@ public class MovementController : MonoBehaviour
             case MovementEvent.MOVING_RIGHT_STARTED:
                 _moveDirection = 1f;
                 break;
-            
-            case MovementEvent.MOVING_LEFT_STOPPED:
-                if (_moveDirection < 0)
-                    _moveDirection = 0f;
-                break;
-            
-            case MovementEvent.MOVING_RIGHT_STOPPED:
-                if (_moveDirection > 0)
-                    _moveDirection = 0f;
+
+            case MovementEvent.MOVING_STOPPED:
+                _moveDirection = 0f;
                 break;
         }
     }
 
     private void FixedUpdate()
-    {
-        Move(_moveDirection * Time.deltaTime * _stats.movementSpeed);
-
-        bool wasGrounded = _grounded;
-        _grounded = false;
-
-        var contacts = new List<ContactPoint2D>();
-
-        _circleCollider.GetContacts(contacts);
-
-        if (contacts.Count > 0)
         {
-            _grounded = true;
-            if (!wasGrounded)
+            Move(_moveDirection * Time.deltaTime * _stats.movementSpeed);
+
+            bool wasGrounded = _grounded;
+            _grounded = false;
+
+            var contacts = new List<ContactPoint2D>();
+
+            _circleCollider.GetContacts(contacts);
+
+            if (contacts.Count > 0)
             {
-                _eventSystem.Dispatch(MovementEvent.GROUNDED);
+                _grounded = true;
+                if (!wasGrounded)
+                {
+                    _eventSystem.Dispatch(MovementEvent.GROUNDED);
+                }
+            }
+
+            if (_wannaJump && _grounded)
+            {
+                _wannaJump = false;
+                _rigidbody.AddForce(new Vector2(0f, _stats.jumpForce));
             }
         }
 
-        if (_wannaJump && _grounded)
+        public void Move(float move)
         {
-            _wannaJump = false;
-            _rigidbody.AddForce(new Vector2(0f, _stats.jumpForce));
-        }
-    }
-
-    public void Move(float move)
-    {
-        if (_grounded)
-        {
-            Vector3 targetVelocity = new Vector2(move * 10f, _rigidbody.velocity.y);
-            _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity,
-                _stats.movementSmoothing);
-
-            if (move < 0 && !_flipped || (move > 0 && _flipped))
+            if (_grounded)
             {
-                FlipByDirection();
+                Vector3 targetVelocity = new Vector2(move * 10f, _rigidbody.velocity.y);
+                _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity,
+                    _stats.movementSmoothing);
+
+                if (move < 0 && !_flipped || (move > 0 && _flipped))
+                {
+                    FlipByDirection();
+                }
             }
         }
+
+        public void Jump(EventData e)
+        {
+            if (_grounded)
+            {
+                _wannaJump = true;
+            }
+        }
+
+
+        private void FlipByDirection()
+        {
+            _flipped = !_flipped;
+
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
     }
-
-    public void Jump(EventData e)
-    {
-        _wannaJump = true;
-    }
-
-
-    private void FlipByDirection()
-    {
-        _flipped = !_flipped;
-
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-    }
-}
