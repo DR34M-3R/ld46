@@ -85,17 +85,21 @@ public class MovementController : MonoBehaviour
 
     public void Move(float move)
     {
-        if (_grounded)
+        if (!_grounded)
         {
-            Vector3 targetVelocity = new Vector2(move * 10f, _rigidbody.velocity.y);
-            _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity,
-                _stats.movementSmoothing);
+            move *= 0.4f;
+        }
+        
+
+        Vector3 targetVelocity = new Vector2(move * 10f, _rigidbody.velocity.y);
+            _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity, _stats.movementSmoothing);
 
             if (move < 0 && !_flipped || (move > 0 && _flipped))
             {
                 FlipByDirection();
             }
-        }
+        
+        
     }
 
     public void Jump(EventData e)

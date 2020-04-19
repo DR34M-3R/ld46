@@ -13,6 +13,13 @@
             <e p="Event_Const.cs" t="Include" />
           </e>
         </e>
+        <e p="Camera2D" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Camera2D.cs" t="Include" />
+            <e p="Camera2DTrigger.cs" t="Include" />
+            <e p="Character2DControl.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Core" t="Include">
             <e p="EventSystem" t="Include">
@@ -20,6 +27,9 @@
               <e p="EventSystem.cs" t="Include" />
               <e p="HandlerData.cs" t="Include" />
             </e>
+          </e>
+          <e p="Door" t="Include">
+            <e p="Door.cs" t="Include" />
           </e>
           <e p="Events" t="Include">
             <e p="ActionEvent.cs" t="Include" />
@@ -43,6 +53,7 @@
             <e p="HPController.cs" t="Include" />
             <e p="MovementController.cs" t="Include" />
             <e p="Stats.cs" t="Include" />
+            <e p="SuckAttackController.cs" t="Include" />
             <e p="UserInputController.cs" t="Include" />
           </e>
           <e p="Menu" t="Include">
