@@ -2,10 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41e27fab-39d5-43c4-8132-92153e59d423" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Camera/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Camera/Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EventData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EventData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/Materials/камера.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/Materials/камера.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/Терминал.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/Терминал.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/камера светится.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/камера светится.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/камера.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/камера.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Новое/Materials/камера.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Новое/Materials/камера.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Новое/Терминал.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Новое/Терминал.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Новое/камера светится.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Новое/камера светится.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Новое/камера.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Новое/камера.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +37,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< Updated upstream
     <setting file="file://$PROJECT_DIR$/Assets/AI/AI_sripts/DamageController_AI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/HPEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AI/AI_sripts/Event_Const.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,17 +64,48 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/RandomSounds.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/SoundController.cs" root0="FORCE_HIGHLIGHTING" />
+=======
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/HandlerData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AI/AI_sripts/Event_Const.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventTest/TestInputController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AI/AI_sripts/AI_Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AI/AI_sripts/DamageController_AI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventTest/EventSystemReceiverTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventTest/EventSystemDispatcherTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Character/PlayerDeathController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/HPController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Stats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/SoundController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/SoundByEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AI.meta" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> Stashed changes
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/Sound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/RandomSounds.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/HPEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/AttackActionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pause/PauseView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Stats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/HPController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" />
+=======
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/AttackActionController.cs" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -66,9 +119,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
+    <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -85,6 +140,18 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -96,6 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587297603109</updated>
       <workItem from="1587297609105" duration="283000" />
+      <workItem from="1587298623024" duration="2405000" />
     </task>
     <servers />
   </component>
@@ -104,6 +172,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1587297540820">
       <screen x="0" y="0" width="1920" height="1040" />
