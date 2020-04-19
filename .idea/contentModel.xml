@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\User\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\User\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ld46.-1749508496.00" t="ExcludeRecursive" />
+    <e p="C:\Users\User\Documents\projects\ld46" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="AI" t="Include">
+          <e p="AI_sripts" t="Include">
+            <e p="AI_Controller.cs" t="Include" />
+            <e p="DamageController_AI.cs" t="Include" />
+            <e p="Event_Const.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="core" t="Include">
+            <e p="EventSystem" t="Include">
+              <e p="EventData.cs" t="Include" />
+              <e p="EventSystem.cs" t="Include" />
+              <e p="HandlerData.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Events" t="Include">
+            <e p="EventData.cs" t="Include" />
+            <e p="HPEvent.cs" t="Include" />
+            <e p="MovementEvent.cs" t="Include" />
+          </e>
+          <e p="EventTest" t="Include">
+            <e p="EventSystemDispatcherTest.cs" t="Include" />
+            <e p="EventSystemReceiverTest.cs" t="Include" />
+            <e p="TestInputController.cs" t="Include" />
+          </e>
+          <e p="Gameplay" t="Include">
+            <e p="HPController.cs" t="Include" />
+            <e p="MovementController.cs" t="Include" />
+            <e p="Stats.cs" t="Include" />
+            <e p="UserInputController.cs" t="Include" />
+          </e>
+          <e p="Menu" t="Include">
+            <e p="MenuController.cs" t="Include" />
+          </e>
+          <e p="Pause" t="Include">
+            <e p="Pause.cs" t="Include" />
+            <e p="PauseView.cs" t="Include" />
+          </e>
+          <e p="Sounds" t="Include">
+            <e p="RandomSounds.cs" t="Include" />
+            <e p="Sound.cs" t="Include" />
+            <e p="SoundByEvent.cs" t="Include" />
+            <e p="SoundController.cs" t="Include" />
+            <e p="SoundManager.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="PlayerHpView.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="ld46.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
