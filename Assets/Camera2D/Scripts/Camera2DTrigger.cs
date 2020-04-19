@@ -8,6 +8,6 @@ public class Camera2DTrigger : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		Camera2D.CalculateBounds(bounds);
+	//	Camera2D.CalculateBounds(bounds);
 	}
 }

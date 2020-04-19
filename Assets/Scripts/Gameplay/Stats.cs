@@ -16,7 +16,7 @@ namespace Gameplay
         [Range(0f, 100f)]
         public float movementSpeed = 100f;
         
-        [Range(100f, 700f)]
+        [Range(0, 1000F)]
         public float jumpForce = 100f;
     }
 }
