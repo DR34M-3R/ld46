@@ -27,9 +27,9 @@ namespace Gameplay
             float hpCount = Convert.ToSingle(e.Data);
             CurrentHP += hpCount;
             
-            if (CurrentHP > _stats.HP)
+            if (CurrentHP > _stats.hp)
             {
-                CurrentHP = _stats.HP;
+                CurrentHP = _stats.hp;
             }
             
             _eventSystem.Dispatch(HPEvent.CHANGED, CurrentHP);

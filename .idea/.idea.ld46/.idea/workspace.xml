@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41e27fab-39d5-43c4-8132-92153e59d423" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/event_system.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EventData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EventData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Stats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/Materials/камера.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/Materials/камера.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/Терминал.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/Терминал.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/камера светится.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/камера светится.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/камера.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TerminalCamera/камера.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/HPController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/HPController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +47,8 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Stats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/HPController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" />
       </list>
     </option>
   </component>
@@ -171,5 +169,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-938.-2160.2560.1400@0.0.1920.1040" timestamp="1587299661879" />
+    <state x="610" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587299814341">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="610" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-938.-2160.2560.1400@0.0.1920.1040" timestamp="1587299814341" />
   </component>
 </project>

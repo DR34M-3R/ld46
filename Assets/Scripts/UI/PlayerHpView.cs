@@ -23,7 +23,7 @@ public class PlayerHpView : MonoBehaviour
     void Start()
     {
         _player.GetComponent<EventSystem>().AddListener(HPEvent.CHANGED, OnHealthChanged);
-        _maxPlayerHealth = _player.GetComponent<Stats>().HP;
+        _maxPlayerHealth = _player.GetComponent<Stats>().hp;
     }
 
     // Update is called once per frame
