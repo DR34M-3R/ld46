@@ -27,8 +27,8 @@ public class UserInputController : MonoBehaviour
         // Input.GetAxis("Horizontal") TODO implement it better
         foreach (var entry in KeyMap)
         {
-             if (entry.Value.KeyDownEvent != null && Input.GetKeyDown(entry.Key)) _eventSystem.Dispatch(entry.Value.KeyDownEvent);
-             if (entry.Value.KeyUpEvent != null && Input.GetKeyUp(entry.Key)) _eventSystem.Dispatch(entry.Value.KeyUpEvent);
+             if (entry.Value.KeyDownEvent.Length > 0 && Input.GetKeyDown(entry.Key)) _eventSystem.Dispatch(entry.Value.KeyDownEvent);
+             if (entry.Value.KeyUpEvent.Length > 0 && Input.GetKeyUp(entry.Key)) _eventSystem.Dispatch(entry.Value.KeyUpEvent);
         }
     }
 }

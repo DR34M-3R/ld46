@@ -12,16 +12,19 @@ public class AttackActionController : MonoBehaviour
     public Vector2 Direction;
 
     public float Distance;
-    [SerializeField]
+    
     private Stats _stats;
+    private EventSystem _eventSystem;
 
-
-    private void Update()
+    void Start()
     {
-        Attack();
+        _stats = GetComponent<Stats>();
+        _eventSystem = GetComponent<EventSystem>();
+        
+        _eventSystem.AddListener(ActionEvent.ATTACK, Attack);
     }
 
-    public void Attack()
+    private void Attack(EventData e)
     {
         GetEventSystem()?.Dispatch(HPEvent.DAMAGE_RECEIVED, _stats.Damage);
     }

@@ -7,7 +7,7 @@ namespace Gameplay
 {
     public class HPController : MonoBehaviour
     {
-        public float CurrentHP;
+        private float _currentHP;
         private Stats _stats;
 
         private EventSystem _eventSystem;
@@ -19,35 +19,35 @@ namespace Gameplay
 
             _eventSystem.AddListener(HPEvent.DAMAGE_RECEIVED, OnDamageReceived);
             _eventSystem.AddListener(HPEvent.HEALED, OnHealed);
-            
+            _currentHP = _stats.hp;
         }
 
         void OnHealed(EventData e)
         {
             float hpCount = Convert.ToSingle(e.Data);
-            CurrentHP += hpCount;
+            _currentHP += hpCount;
             
-            if (CurrentHP > _stats.hp)
+            if (_currentHP > _stats.hp)
             {
-                CurrentHP = _stats.hp;
+                _currentHP = _stats.hp;
             }
             
-            _eventSystem.Dispatch(HPEvent.CHANGED, CurrentHP);
+            _eventSystem.Dispatch(HPEvent.CHANGED, _currentHP);
         }
 
         void OnDamageReceived(EventData e)
         {
-            if (CurrentHP > 0)
+            if (_currentHP > 0)
             {
                 float hpCount = Convert.ToSingle(e.Data);
-                CurrentHP -= hpCount;
+                _currentHP -= hpCount;
             
-                if (CurrentHP <= 0)
+                if (_currentHP <= 0)
                 {
-                    CurrentHP = 0;
+                    _currentHP = 0;
                     _eventSystem.Dispatch(HPEvent.DIED);
                 }
-                _eventSystem.Dispatch(HPEvent.CHANGED, CurrentHP);
+                _eventSystem.Dispatch(HPEvent.CHANGED, _currentHP);
             }
         }
 
