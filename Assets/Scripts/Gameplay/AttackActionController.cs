@@ -24,6 +24,8 @@ public class AttackActionController : MonoBehaviour
         _eventSystem.AddListener(ActionEvent.ATTACK, Attack);
     }
 
+    
+
     private void Attack(EventData e)
     {
         GetEventSystem()?.Dispatch(HPEvent.DAMAGE_RECEIVED, _stats.Damage);
