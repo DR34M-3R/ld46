@@ -26,10 +26,7 @@ public class Camera2D : MonoBehaviour {
 		_internal.FindPlayer_internal();
 	}
 
-	public static void CalculateBounds(SpriteRenderer ren)
-	{
-		_internal.CalculateBounds_internal(ren);
-	}
+
 
 	void FindPlayer_internal()
 	{
@@ -41,32 +38,18 @@ public class Camera2D : MonoBehaviour {
 	{
 		Vector3 position = player.position;
 		position.z = transform.position.z;
-		position = MoveInside(position, new Vector3(min.x, min.y, position.z), new Vector3(max.x, max.y, position.z));
 		transform.position = Vector3.Lerp(transform.position, new Vector3(position.x + offset.x, position.y +offset.y, position.z), smooth * Time.deltaTime);
 	}
 
 	void LateUpdate()
 	{
-		if(player != null)
+		if(player == null)
 		{
-			Follow();
+			return;
 		}
+		
+		Follow();
 	}
 
-	public void CalculateBounds_internal(SpriteRenderer ren)
-	{
-		bounds = ren;
-		float height = cam.orthographicSize * 2;
-		Bounds b = new Bounds(Vector3.zero, new Vector3(height * cam.aspect, height, 0));
-		min = b.max + ren.bounds.min;
-		max = b.min + ren.bounds.max;
-	}
-
-	Vector3 MoveInside(Vector3 current, Vector3 pMin, Vector3 pMax)
-	{
-		if(bounds == null) return current;
-		current = Vector3.Max(current, pMin);
-		current = Vector3.Min(current, pMax);
-		return current;
-	}
+	
 }

@@ -72,6 +72,7 @@ public class MovementController : MonoBehaviour
         if (_wannaJump && _grounded)
         {
             _wannaJump = false;
+            Debug.Log(_stats.jumpForce);
             _rigidbody.AddForce(new Vector2(0f, _stats.jumpForce));
         }
     }
@@ -80,7 +81,7 @@ public class MovementController : MonoBehaviour
     {
         if (!_grounded)
         {
-            move *= 0.4f;
+            move *= 0.8f;
         }
 
 

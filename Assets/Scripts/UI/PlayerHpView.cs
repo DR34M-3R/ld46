@@ -19,6 +19,8 @@ public class PlayerHpView : MonoBehaviour
     
     void Start()
     {
+      //  if (_player == null)
+        //    _player.GetComponent<EventSystem>().AddListener(HPEvent.CHANGED, OnHealthChanged);
         _player.GetComponent<EventSystem>().AddListener(HPEvent.CHANGED, OnHealthChanged);
         _maxPlayerHealth = _player.GetComponent<Stats>().hp;
     }

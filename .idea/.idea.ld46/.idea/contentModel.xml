@@ -66,6 +66,9 @@
             <e p="PauseView.cs" t="Include" />
           </e>
           <e p="Sounds" t="Include">
+            <e p="MainMusic" t="Include">
+              <e p="MainMusic.cs" t="Include" />
+            </e>
             <e p="RandomSounds.cs" t="Include" />
             <e p="Sound.cs" t="Include" />
             <e p="SoundByEvent.cs" t="Include" />
