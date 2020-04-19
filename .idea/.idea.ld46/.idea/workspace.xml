@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41e27fab-39d5-43c4-8132-92153e59d423" name="Default Changelist" comment="">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" afterDir="false" />
@@ -12,6 +13,12 @@
       <change afterPath="$PROJECT_DIR$/Assets.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Camera/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Camera/Idle.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventData.cs.meta" afterDir="false" />
@@ -26,6 +33,9 @@
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Новое/камера светится.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Новое/камера светится.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Новое/камера.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Новое/камера.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +47,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <setting file="file://$PROJECT_DIR$/Assets/AI/AI_sripts/DamageController_AI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/HPEvent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -85,6 +96,27 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/SoundByEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AI.meta" root0="FORCE_HIGHLIGHTING" />
 >>>>>>> Stashed changes
+=======
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/HandlerData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AI/AI_sripts/Event_Const.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventTest/TestInputController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AI/AI_sripts/AI_Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AI/AI_sripts/DamageController_AI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventTest/EventSystemReceiverTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventTest/EventSystemDispatcherTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Character/PlayerDeathController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/HPController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Stats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/SoundController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/SoundByEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AI.meta" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> Stashed changes
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/Sound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/RandomSounds.cs" root0="FORCE_HIGHLIGHTING" />
@@ -97,11 +129,16 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Stats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/HPController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" />
+=======
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/AttackActionController.cs" />
+>>>>>>> Stashed changes
 =======
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/AttackActionController.cs" />

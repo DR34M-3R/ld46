@@ -6,6 +6,8 @@ namespace Gameplay
     {
         public int hp = 100;
         
+        public int Damage = 100;
+        
         [Range(0f, 1f)]
         public float movementSmoothing = 0.1f;        
         

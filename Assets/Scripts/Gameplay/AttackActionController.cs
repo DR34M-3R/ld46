@@ -1,30 +1,51 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Events;
 using Gameplay;
 using UnityEngine;
 
 public class AttackActionController : MonoBehaviour
 {
-    public List<Vector3> Positions = new List<Vector3>();
+    public List<Transform> Positions = new List<Transform>();
 
+    public Vector2 Direction;
+
+    public float Distance;
     [SerializeField]
     private Stats _stats;
 
+
+    private void Update()
+    {
+        Attack();
+    }
+
     public void Attack()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.forward);
-
-        if (hit.collider != null)
-        {
-
-        }
+        GetEventSystem()?.Dispatch(HPEvent.DAMAGE_RECEIVED, _stats.Damage);
     }
 
 
- //   private EventSystem GetCollision()
-   // {
-        
-    //}
+    private EventSystem GetEventSystem()
+    {
+        foreach (var item in Positions)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(item.position, new Vector2(1, 0), Distance);
+            Debug.DrawRay(Positions[0].position, new Vector2(1, 0) * Distance, Color.green);
+
+            if (hit.collider != null)
+            {
+                if (hit.collider.TryGetComponent(out EventSystem eventSystem))
+                {
+                    Debug.DrawRay(Positions[0].position, new Vector2(1, 0) * Distance, Color.red);
+                    return eventSystem;
+                }
+            }
+        }
+
+        return null;
+    }
     
     
 }
