@@ -26,19 +26,18 @@ public class AttackActionController : MonoBehaviour
         GetEventSystem()?.Dispatch(HPEvent.DAMAGE_RECEIVED, _stats.Damage);
     }
 
-
     private EventSystem GetEventSystem()
     {
         foreach (var item in Positions)
         {
-            RaycastHit2D hit = Physics2D.Raycast(item.position, new Vector2(1, 0), Distance);
-            Debug.DrawRay(Positions[0].position, new Vector2(1, 0) * Distance, Color.green);
+            RaycastHit2D hit = Physics2D.Raycast(item.position, Direction,  Distance);
+            Debug.DrawRay(Positions[0].position, Direction * Distance, Color.green);
 
             if (hit.collider != null)
             {
                 if (hit.collider.TryGetComponent(out EventSystem eventSystem))
                 {
-                    Debug.DrawRay(Positions[0].position, new Vector2(1, 0) * Distance, Color.red);
+                    Debug.DrawRay(Positions[0].position, Direction * Distance, Color.red);
                     return eventSystem;
                 }
             }

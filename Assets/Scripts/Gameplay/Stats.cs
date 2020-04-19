@@ -8,6 +8,7 @@ namespace Gameplay
         
         public int Damage = 100;
         
+        
         [Range(0f, 1f)]
         public float movementSmoothing = 0.1f;        
         
