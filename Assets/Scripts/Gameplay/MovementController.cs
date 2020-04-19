@@ -56,7 +56,7 @@ public class MovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //  Move(_moveDirection * Time.deltaTime * _stats.movementSpeed);
+        Move(_moveDirection * Time.deltaTime * _stats.movementSpeed);
         
         bool wasGrounded = _grounded;
         _grounded = false;
@@ -77,7 +77,7 @@ public class MovementController : MonoBehaviour
         if (_wannaJump && _grounded)
         {
             _wannaJump = false;
-      //      _rigidbody.AddForce(new Vector2(0f, _stats.jumpForce));
+            _rigidbody.AddForce(new Vector2(0f, _stats.jumpForce));
         }
     }
 
@@ -86,7 +86,7 @@ public class MovementController : MonoBehaviour
         if (_grounded)
         {
             Vector3 targetVelocity = new Vector2(move * 10f, _rigidbody.velocity.y);
-      //      _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity, _stats.movementSmoothing);
+            _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity, _stats.movementSmoothing);
 
             if (move < 0 && !_flipped || (move > 0 && _flipped))
             {

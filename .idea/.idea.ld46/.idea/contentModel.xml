@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\negrime\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\negrime\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ld46.779076100.00" t="ExcludeRecursive" />
-    <e p="C:\Users\negrime\Desktop\projects\ld46" t="IncludeRecursive">
+    <e p="C:\Users\User\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\User\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ld46.-1749508496.00" t="ExcludeRecursive" />
+    <e p="C:\Users\User\Documents\projects\ld46" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AI" t="Include">
@@ -35,10 +35,7 @@
             <e p="GameOverView.cs" t="Include" />
           </e>
           <e p="Gameplay" t="Include">
-<<<<<<< Updated upstream
-=======
             <e p="AttackActionController.cs" t="Include" />
->>>>>>> Stashed changes
             <e p="Character" t="Include">
               <e p="PlayerDeathController.cs" t="Include" />
             </e>
