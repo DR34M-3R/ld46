@@ -8,7 +8,7 @@ public class MovementController : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
     private CircleCollider2D _circleCollider;
-    
+
     private Vector3 _velocity = Vector3.zero;
     private bool _flipped;
     private bool _grounded;
@@ -31,7 +31,7 @@ public class MovementController : MonoBehaviour
         _eventSystem.AddListener(MovementEvent.MOVING_RIGHT_STARTED, OnMovingStarted);
         _eventSystem.AddListener(MovementEvent.MOVING_RIGHT_STOPPED, OnMovingStarted);
     }
-    
+
     private void OnMovingStarted(EventData e)
     {
         switch (e.Type)
@@ -39,17 +39,19 @@ public class MovementController : MonoBehaviour
             case MovementEvent.MOVING_LEFT_STARTED:
                 _moveDirection = -1f;
                 break;
-            
-            case MovementEvent.MOVING_LEFT_STOPPED:
-                _moveDirection = 0f;
-                break;
-            
+
             case MovementEvent.MOVING_RIGHT_STARTED:
                 _moveDirection = 1f;
                 break;
             
+            case MovementEvent.MOVING_LEFT_STOPPED:
+                if (_moveDirection < 0)
+                    _moveDirection = 0f;
+                break;
+            
             case MovementEvent.MOVING_RIGHT_STOPPED:
-                _moveDirection = 0f;
+                if (_moveDirection > 0)
+                    _moveDirection = 0f;
                 break;
         }
     }
@@ -57,14 +59,14 @@ public class MovementController : MonoBehaviour
     private void FixedUpdate()
     {
         Move(_moveDirection * Time.deltaTime * _stats.movementSpeed);
-        
+
         bool wasGrounded = _grounded;
         _grounded = false;
-        
+
         var contacts = new List<ContactPoint2D>();
-        
+
         _circleCollider.GetContacts(contacts);
-        
+
         if (contacts.Count > 0)
         {
             _grounded = true;
@@ -73,7 +75,7 @@ public class MovementController : MonoBehaviour
                 _eventSystem.Dispatch(MovementEvent.GROUNDED);
             }
         }
-        
+
         if (_wannaJump && _grounded)
         {
             _wannaJump = false;
@@ -86,7 +88,8 @@ public class MovementController : MonoBehaviour
         if (_grounded)
         {
             Vector3 targetVelocity = new Vector2(move * 10f, _rigidbody.velocity.y);
-            _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity, _stats.movementSmoothing);
+            _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity,
+                _stats.movementSmoothing);
 
             if (move < 0 && !_flipped || (move > 0 && _flipped))
             {
