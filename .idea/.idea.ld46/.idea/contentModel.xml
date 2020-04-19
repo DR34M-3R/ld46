@@ -31,7 +31,13 @@
             <e p="EventSystemReceiverTest.cs" t="Include" />
             <e p="TestInputController.cs" t="Include" />
           </e>
+          <e p="GameOver" t="Include">
+            <e p="GameOverView.cs" t="Include" />
+          </e>
           <e p="Gameplay" t="Include">
+            <e p="Character" t="Include">
+              <e p="PlayerDeathController.cs" t="Include" />
+            </e>
             <e p="HPController.cs" t="Include" />
             <e p="MovementController.cs" t="Include" />
             <e p="Stats.cs" t="Include" />
