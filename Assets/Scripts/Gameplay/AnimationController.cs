@@ -23,7 +23,6 @@ public class AnimationController : MonoBehaviour
         var anim = animationList.FirstOrDefault(soundData => soundData.eventType == e.Type);
         if (anim != null)
         {
-            Debug.Log(anim.animationName);
             _animator.Play(anim.animationName);
         }
     }
