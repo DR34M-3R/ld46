@@ -13,9 +13,9 @@ public class EventSystemReceiverTest : MonoBehaviour
         _eventSystem.AddListener("ping", OnPing);
     }
 
-    void OnPing(EventData e)
+    void OnPing(EventData data)
     {
-        Debug.Log(e);
+        Debug.Log(data);
     }
 
     // Update is called once per frame

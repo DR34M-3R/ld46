@@ -37,7 +37,6 @@ public class EventSystem : MonoBehaviour
     
     public void Dispatch(string eventType, object eventData = null)
     {
-        Debug.Log(eventType);
         var e = new EventData(eventType, eventData);
         DispatchEvent(eventType, e);
         DispatchEvent(BROADCAST, e);

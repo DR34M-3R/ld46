@@ -24,13 +24,12 @@ namespace Gameplay
 
         void OnHealed(EventData e)
         {
-
             float hpCount = Convert.ToSingle(e.Data);
             CurrentHP += hpCount;
             
-            if (CurrentHP > _stats.hp)
+            if (CurrentHP > _stats.HP)
             {
-                CurrentHP = _stats.hp;
+                CurrentHP = _stats.HP;
             }
             
             _eventSystem.Dispatch(HPEvent.CHANGED, CurrentHP);
