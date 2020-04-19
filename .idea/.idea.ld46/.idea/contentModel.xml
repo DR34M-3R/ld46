@@ -48,6 +48,13 @@
           <e p="Gameplay" t="Include">
             <e p="AnimationController.cs" t="Include" />
             <e p="AttackActionController.cs" t="Include" />
+<<<<<<< Updated upstream
+=======
+            <e p="Character" t="Include">
+              <e p="HealthSystem.cs" t="Include" />
+              <e p="PlayerDeathController.cs" t="Include" />
+            </e>
+>>>>>>> Stashed changes
             <e p="HPController.cs" t="Include" />
             <e p="MovementController.cs" t="Include" />
             <e p="PlayerDeathController.cs" t="Include" />
@@ -71,6 +78,9 @@
             <e p="Sound.cs" t="Include" />
             <e p="SoundByEvent.cs" t="Include" />
             <e p="SoundManager.cs" t="Include" />
+            <e p="Tutorial" t="Include">
+              <e p="Tutorial.cs" t="Include" />
+            </e>
           </e>
           <e p="UI" t="Include">
             <e p="PlayerHpView.cs" t="Include" />

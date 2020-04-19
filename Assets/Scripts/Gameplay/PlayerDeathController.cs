@@ -20,8 +20,9 @@ public class PlayerDeathController : MonoBehaviour
 
     private void OnPlayerDied(EventData e)
     {
-        Time.timeScale = 0;
         _gameOverPanel.SetActive(true);
+        Time.timeScale = 0;
+
     }
     
 
