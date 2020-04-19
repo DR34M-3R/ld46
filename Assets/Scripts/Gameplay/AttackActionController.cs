@@ -35,14 +35,14 @@ public class AttackActionController : MonoBehaviour
     {
         foreach (var item in Positions)
         {
-            RaycastHit2D hit = Physics2D.Raycast(item.position, transform.forward,  Distance);
-            Debug.DrawRay(Positions[0].position, transform.forward * Distance, Color.green);
+            RaycastHit2D hit = Physics2D.Raycast(item.position, new Vector2(transform.localScale.x, 0),  Distance);
+            Debug.DrawRay(Positions[0].position, new Vector2(transform.localScale.x, 0) * Distance, Color.green, 0.2f);
 
             if (hit.collider != null)
             {
                 if (hit.collider.TryGetComponent(out EventSystem eventSystem))
                 {
-                    Debug.DrawRay(Positions[0].position, transform.forward * Distance, Color.red);
+                    Debug.DrawRay(Positions[0].position, new Vector2(transform.localScale.x, 0)  * Distance, Color.red, 0.3f);
                     return eventSystem;
                 }
             }

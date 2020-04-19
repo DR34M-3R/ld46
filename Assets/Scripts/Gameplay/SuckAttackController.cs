@@ -24,33 +24,39 @@ public class SuckAttackController : MonoBehaviour
     {
         _eventSystem = GetComponent<EventSystem>();
         
-        _eventSystem.AddListener(ActionEvent.ATTACK, Attack);
+        _eventSystem.AddListener(ActionEvent.SUCK, Attack);
     }
 
     private void Attack(EventData e)
     {
+
         var eventTmp = GetEventSystem();
-        
+
         if (eventTmp == null)
+        {
+            Debug.LogWarning("Object does not have Event System");
             return;
-        
+        }
+
         if (!eventTmp.GetComponent<Stats>().isSuck)
+        {
+            Debug.LogWarning("Object does not have suck priority");
             return;
+        }
             
-        Debug.DrawRay(Transform.position, transform.forward * Distance, Color.red, 0.2f);
+        Debug.DrawRay(Transform.position, new Vector2(transform.localScale.x, 0) * Distance, Color.red, 0.2f);
         GetEventSystem()?.Dispatch(HPEvent.DAMAGE_RECEIVED, _suckDamage);
     }
 
     private void Update()
     {
-        Attack(null);
     }
 
     private EventSystem GetEventSystem()
     {
 
-        RaycastHit2D hit = Physics2D.Raycast(Transform.position, transform.forward,  Distance);
-        Debug.DrawRay(Transform.position, transform.forward * Distance, Color.green);
+        RaycastHit2D hit = Physics2D.Raycast(Transform.position, new Vector2(transform.localScale.x, 0),  Distance);
+        Debug.DrawRay(Transform.position, new Vector2(transform.localScale.x, 0) * Distance, Color.green);
 
         if (hit.collider != null)
         {
