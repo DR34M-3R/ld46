@@ -37,7 +37,7 @@ public class SuckAttackController : MonoBehaviour
         if (!eventTmp.GetComponent<Stats>().isSuck)
             return;
             
-        Debug.DrawRay(Transform.position, Direction * Distance, Color.red, 0.2f);
+        Debug.DrawRay(Transform.position, transform.forward * Distance, Color.red, 0.2f);
         GetEventSystem()?.Dispatch(HPEvent.DAMAGE_RECEIVED, _suckDamage);
     }
 
@@ -49,8 +49,8 @@ public class SuckAttackController : MonoBehaviour
     private EventSystem GetEventSystem()
     {
 
-        RaycastHit2D hit = Physics2D.Raycast(Transform.position, Direction,  Distance);
-        Debug.DrawRay(Transform.position, Direction * Distance, Color.green);
+        RaycastHit2D hit = Physics2D.Raycast(Transform.position, transform.forward,  Distance);
+        Debug.DrawRay(Transform.position, transform.forward * Distance, Color.green);
 
         if (hit.collider != null)
         {
