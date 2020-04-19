@@ -413,8 +413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   movementSmoothing: 0.033
-  movementSpeed: 100
-  jumpForce: 100
+  movementSpeed: 20
+  jumpForce: 300
 --- !u!1 &1643533545
 GameObject:
   m_ObjectHideFlags: 0
