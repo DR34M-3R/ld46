@@ -7,7 +7,8 @@ namespace Gameplay
         public int hp = 100;
         
         public int Damage = 100;
-        
+
+        public bool isSuck;
         
         [Range(0f, 1f)]
         public float movementSmoothing = 0.1f;        

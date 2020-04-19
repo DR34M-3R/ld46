@@ -50,62 +50,65 @@ public class MovementController : MonoBehaviour
     }
 
     private void FixedUpdate()
+    {
+        Move(_moveDirection * Time.deltaTime * _stats.movementSpeed);
+
+        bool wasGrounded = _grounded;
+        _grounded = false;
+
+        var contacts = new List<ContactPoint2D>();
+
+        _circleCollider.GetContacts(contacts);
+
+        if (contacts.Count > 0)
         {
-            Move(_moveDirection * Time.deltaTime * _stats.movementSpeed);
-
-            bool wasGrounded = _grounded;
-            _grounded = false;
-
-            var contacts = new List<ContactPoint2D>();
-
-            _circleCollider.GetContacts(contacts);
-
-            if (contacts.Count > 0)
+            _grounded = true;
+            if (!wasGrounded)
             {
-                _grounded = true;
-                if (!wasGrounded)
-                {
-                    _eventSystem.Dispatch(MovementEvent.GROUNDED);
-                }
-            }
-
-            if (_wannaJump && _grounded)
-            {
-                _wannaJump = false;
-                _rigidbody.AddForce(new Vector2(0f, _stats.jumpForce));
+                _eventSystem.Dispatch(MovementEvent.GROUNDED);
             }
         }
 
-        public void Move(float move)
+        if (_wannaJump && _grounded)
         {
-            if (_grounded)
-            {
-                Vector3 targetVelocity = new Vector2(move * 10f, _rigidbody.velocity.y);
-                _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity,
-                    _stats.movementSmoothing);
-
-                if (move < 0 && !_flipped || (move > 0 && _flipped))
-                {
-                    FlipByDirection();
-                }
-            }
-        }
-
-        public void Jump(EventData e)
-        {
-            if (_grounded)
-            {
-                _wannaJump = true;
-            }
-        }
-
-
-        private void FlipByDirection()
-        {
-            _flipped = !_flipped;
-
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
+            _wannaJump = false;
+            _rigidbody.AddForce(new Vector2(0f, _stats.jumpForce));
         }
     }
+
+    private void Move(float move)
+    {
+        if (!_grounded)
+        {
+            move *= 0.4f;
+        }
+
+
+        Vector3 targetVelocity = new Vector2(move * 10f, _rigidbody.velocity.y);
+        _rigidbody.velocity =
+            Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity, _stats.movementSmoothing);
+
+        if (move < 0 && !_flipped || (move > 0 && _flipped))
+        {
+            FlipByDirection();
+        }
+    }
+
+    private void Jump(EventData e)
+    {
+        if (_grounded)
+        {
+            _wannaJump = true;
+        }
+    }
+
+
+    private void FlipByDirection()
+    {
+        _flipped = !_flipped;
+
+        var scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+}
