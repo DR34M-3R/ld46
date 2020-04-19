@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="41e27fab-39d5-43c4-8132-92153e59d423" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld46/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/HPController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/HPController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +36,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/HandlerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/MovementEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/EventData.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UserInputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sounds/RandomSounds.cs" root0="FORCE_HIGHLIGHTING" />
@@ -48,6 +50,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Stats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/HPController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/EventSystem/EventSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHpView.cs" />
       </list>
     </option>

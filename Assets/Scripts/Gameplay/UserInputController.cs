@@ -25,8 +25,6 @@ public class UserInputController : MonoBehaviour
     void Update()
     {
         // Input.GetAxis("Horizontal") TODO implement it better
-
-        
         foreach (var entry in KeyMap)
         {
              if (entry.Value.KeyDownEvent != null && Input.GetKeyDown(entry.Key)) _eventSystem.Dispatch(entry.Value.KeyDownEvent);

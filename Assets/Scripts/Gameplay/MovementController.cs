@@ -29,7 +29,7 @@ public class MovementController : MonoBehaviour
         _eventSystem.AddListener(MovementEvent.MOVING_LEFT_STARTED, OnMovingStarted);
         _eventSystem.AddListener(MovementEvent.MOVING_LEFT_STOPPED, OnMovingStarted);
         _eventSystem.AddListener(MovementEvent.MOVING_RIGHT_STARTED, OnMovingStarted);
-        _eventSystem.AddListener(MovementEvent.MOVING_LEFT_STOPPED, OnMovingStarted);
+        _eventSystem.AddListener(MovementEvent.MOVING_RIGHT_STOPPED, OnMovingStarted);
     }
     
     private void OnMovingStarted(EventData e)
@@ -41,7 +41,7 @@ public class MovementController : MonoBehaviour
                 break;
             
             case MovementEvent.MOVING_LEFT_STOPPED:
-                _moveDirection = 0;
+                _moveDirection = 0f;
                 break;
             
             case MovementEvent.MOVING_RIGHT_STARTED:
@@ -60,11 +60,11 @@ public class MovementController : MonoBehaviour
         
         bool wasGrounded = _grounded;
         _grounded = false;
-
+        
         var contacts = new List<ContactPoint2D>();
-
+        
         _circleCollider.GetContacts(contacts);
-
+        
         if (contacts.Count > 0)
         {
             _grounded = true;

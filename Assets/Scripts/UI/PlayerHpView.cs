@@ -14,11 +14,8 @@ public class PlayerHpView : MonoBehaviour
 
     private float _maxPlayerHealth;
     
-
     [SerializeField]
     private Slider _healthSlider;
-
-
     
     void Start()
     {
@@ -26,13 +23,11 @@ public class PlayerHpView : MonoBehaviour
         _maxPlayerHealth = _player.GetComponent<Stats>().hp;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
-
-
+    
     private void OnHealthChanged(EventData e)
     {
         var value = Convert.ToSingle(e.Data) / _maxPlayerHealth;
