@@ -28,6 +28,7 @@
               <e p="HandlerData.cs" t="Include" />
             </e>
           </e>
+          <e p="DisableController.cs" t="Include" />
           <e p="Door" t="Include">
             <e p="Door.cs" t="Include" />
           </e>
@@ -44,6 +45,7 @@
           </e>
           <e p="GameOver" t="Include">
             <e p="GameOverView.cs" t="Include" />
+            <e p="ShowTitle.cs" t="Include" />
           </e>
           <e p="Gameplay" t="Include">
             <e p="AIInputController.cs" t="Include" />
@@ -81,6 +83,7 @@
               <e p="Tutorial.cs" t="Include" />
             </e>
           </e>
+          <e p="TheEnd.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="PlayerHpView.cs" t="Include" />
           </e>
