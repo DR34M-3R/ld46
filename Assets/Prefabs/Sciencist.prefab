@@ -15,11 +15,17 @@ GameObject:
   - component: {fileID: 6899831688111419427}
   - component: {fileID: 6899831688111419430}
   - component: {fileID: 6899831688111419429}
+<<<<<<< HEAD
   - component: {fileID: -1724887379783675745}
   - component: {fileID: 6899831688526878138}
   m_Layer: 0
   m_Name: Sciencist
   m_TagString: Untagged
+=======
+  m_Layer: 0
+  m_Name: Sciencist
+  m_TagString: Guard
+>>>>>>> master
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,8 +79,13 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD
   m_SortingLayerID: 1317226055
   m_SortingLayer: 2
+=======
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+>>>>>>> master
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a008769916590a4597b86aa10ef3a43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -183,6 +194,7 @@ MonoBehaviour:
   movementSmoothing: 0.1
   movementSpeed: 100
   jumpForce: 100
+<<<<<<< HEAD
 --- !u!114 &-1724887379783675745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +222,5 @@ MonoBehaviour:
   animationList:
   - eventType: died
     animationName: Die
+=======
+>>>>>>> master

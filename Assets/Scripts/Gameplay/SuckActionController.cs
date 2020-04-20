@@ -45,8 +45,13 @@ public class SuckActionController : MonoBehaviour
         }
         Debug.DrawRay(Transform.position, new Vector2(transform.localScale.x, 0) * Distance, Color.red, 0.2f);
         GetEventSystem()?.Dispatch(HPEvent.DAMAGE_RECEIVED, _suckDamage);
+<<<<<<< HEAD
         GetComponent<EventSystem>()?.Dispatch(HPEvent.HEALED, 50);
         eventTmp.Dispatch(HPEvent.DIED);
+=======
+        Destroy(eventTmp.gameObject , 1);
+        GetComponent<EventSystem>()?.Dispatch(HPEvent.HEALED, 50);
+>>>>>>> master
     }
 
     private void Update()
