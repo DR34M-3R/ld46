@@ -55,6 +55,7 @@
             <e p="DeathController.cs" t="Include" />
             <e p="HPController.cs" t="Include" />
             <e p="MovementController.cs" t="Include" />
+            <e p="PianoTransfer.cs" t="Include" />
             <e p="PlayerDeathController.cs" t="Include" />
             <e p="SoundController.cs" t="Include" />
             <e p="Stats.cs" t="Include" />

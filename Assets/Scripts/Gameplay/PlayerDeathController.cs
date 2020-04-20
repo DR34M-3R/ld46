@@ -21,7 +21,7 @@ public class PlayerDeathController : MonoBehaviour
     private void OnPlayerDied(EventData e)
     {
         StartCoroutine(LoadGameOver());
-        Time.timeScale = 0;
+  
         
 
     }
@@ -30,6 +30,7 @@ public class PlayerDeathController : MonoBehaviour
     private IEnumerator LoadGameOver()
     {
         yield return new WaitForSeconds(.5f);
+        Time.timeScale = 0;
         _gameOverPanel.SetActive(true);
     }
     
