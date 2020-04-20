@@ -22,6 +22,8 @@ public class PlayerHpView : MonoBehaviour
       //  if (_player == null)
         //    _player.GetComponent<EventSystem>().AddListener(HPEvent.CHANGED, OnHealthChanged);
         _player.GetComponent<EventSystem>().AddListener(HPEvent.CHANGED, OnHealthChanged);
+     //   _player.GetComponent<EventSystem>().AddListener(HPEvent.HEALED, OnHeal);
+
         _maxPlayerHealth = _player.GetComponent<Stats>().hp;
     }
 
@@ -35,5 +37,11 @@ public class PlayerHpView : MonoBehaviour
         var value = Convert.ToSingle(e.Data) / _maxPlayerHealth;
         _healthSlider.value = value;
     }
+
+   
+
+
+
+
     
 }
