@@ -50,7 +50,6 @@ public class DeathController : MonoBehaviour
         GetComponent<Rigidbody2D>().simulated = false;
         GetComponent<Animator>().SetTrigger("Die");
         Destroy(gameObject, 10);
-
     }
      
 
