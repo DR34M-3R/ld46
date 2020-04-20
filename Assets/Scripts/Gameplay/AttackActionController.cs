@@ -8,8 +8,7 @@ using UnityEngine;
 public class AttackActionController : MonoBehaviour
 {
     public List<Transform> Positions = new List<Transform>();
-
-    public Vector2 Direction;
+    
 
     public float Distance;
     
@@ -35,11 +34,12 @@ public class AttackActionController : MonoBehaviour
     {
         foreach (var item in Positions)
         {
-            RaycastHit2D hit = Physics2D.Raycast(item.position, new Vector2(transform.localScale.x, 0),  Distance);
+            RaycastHit2D hit = Physics2D.Raycast(item.position, new Vector2(transform.localScale.x, 0), Distance);
             Debug.DrawRay(Positions[0].position, new Vector2(transform.localScale.x, 0) * Distance, Color.green, 0.2f);
 
             if (hit.collider != null)
             {
+                Debug.LogWarning(hit.collider.gameObject.name);
                 if (hit.collider.TryGetComponent(out EventSystem eventSystem))
                 {
                     Debug.DrawRay(Positions[0].position, new Vector2(transform.localScale.x, 0)  * Distance, Color.red, 0.3f);

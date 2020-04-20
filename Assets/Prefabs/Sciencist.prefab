@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6899831688111419429}
   - component: {fileID: -1724887379783675745}
   - component: {fileID: 6899831688526878138}
+  - component: {fileID: -7683756453929970012}
   m_Layer: 0
   m_Name: Sciencist
   m_TagString: Untagged
@@ -177,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebb34beb1e94e8e98e078b4c99b50a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 50
   Damage: 100
   isSuck: 1
   movementSmoothing: 0.1
@@ -210,3 +211,15 @@ MonoBehaviour:
   animationList:
   - eventType: died
     animationName: Die
+--- !u!114 &-7683756453929970012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6899831688111419439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f28089bbbb2413c953fb9cb8ff7e412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

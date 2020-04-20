@@ -923,6 +923,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2a50d6d54a4fa8971fb258720e1257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VisionDistance: 10
+  CanContinueChasing: 0
+  IntervalBetweenAttacks: 3
+  AttackDistance: 2
+  PatrolZoneRadius: 10
 --- !u!114 &666157300586290273
 MonoBehaviour:
   m_ObjectHideFlags: 0

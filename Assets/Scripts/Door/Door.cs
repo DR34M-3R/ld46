@@ -25,5 +25,10 @@ public class Door : MonoBehaviour
         _animator.SetTrigger("Open");
         _audio.Play();
         isOpen = true;
+        var col = GetComponents<BoxCollider2D>();
+        foreach (var item in col)
+        {
+            item.enabled = false;
+        }
     }
 }

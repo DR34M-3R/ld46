@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Events;
 using Gameplay;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class DeathController : MonoBehaviour
@@ -31,14 +32,14 @@ public class DeathController : MonoBehaviour
         {
             var rigidbody = GetComponentsInChildren<Rigidbody2D>().Skip(1);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
-
+            GetComponent<MovementController>().enabled = false;
             foreach (var i in rigidbody)
             {
-                i.transform.localRotation = Random.rotation;
+                i.transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 360));
                 i.simulated = true;
-                i.GetComponent<SpriteRenderer>().enabled = true;
                 i.AddForce(Random.insideUnitCircle * Random.Range(50, 150));
                 Destroy(gameObject, 10);
+                i.GetComponent<SpriteRenderer>().enabled = true;
             }
         }
         else
