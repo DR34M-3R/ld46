@@ -43,9 +43,10 @@ public class SuckActionController : MonoBehaviour
             Debug.LogWarning("Object does not have suck priority");
             return;
         }
-            
         Debug.DrawRay(Transform.position, new Vector2(transform.localScale.x, 0) * Distance, Color.red, 0.2f);
         GetEventSystem()?.Dispatch(HPEvent.DAMAGE_RECEIVED, _suckDamage);
+        GetComponent<EventSystem>()?.Dispatch(HPEvent.HEALED, 50);
+        eventTmp.Dispatch(HPEvent.DIED);
     }
 
     private void Update()

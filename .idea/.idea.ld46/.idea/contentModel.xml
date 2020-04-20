@@ -52,6 +52,7 @@
             <e p="Character" t="Include">
               <e p="HealthSystem.cs" t="Include" />
             </e>
+            <e p="DeathController.cs" t="Include" />
             <e p="HPController.cs" t="Include" />
             <e p="MovementController.cs" t="Include" />
             <e p="PlayerDeathController.cs" t="Include" />

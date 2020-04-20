@@ -15,6 +15,7 @@ public class AIInputController : MonoBehaviour
         var taskContext = new TaskContext();
 
         taskContext.GameObject = gameObject;
+        _startPoint = transform.position;
         taskContext.StartPoint = _startPoint;
 
         _taskList = new List<AITask>()
@@ -22,8 +23,7 @@ public class AIInputController : MonoBehaviour
             new AttackAITask(taskContext),
             new GotoEnemyAITask(taskContext),
             new GotoWayPointAITask(taskContext),
-        };
-        _startPoint = transform.position;
+        };    
 
     }
 
@@ -158,7 +158,7 @@ public class AttackAITask : AITask
 
     public override bool CanStart()
     {
-        return GetEnemy(2.5f) != null;
+        return GetEnemy(2f) != null;
     }
 }
 

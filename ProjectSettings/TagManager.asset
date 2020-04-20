@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Guard
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Wrecks
   - 
   - 
   - 
@@ -46,6 +47,12 @@ TagManager:
     locked: 0
   - name: Envirnment
     uniqueID: 4124083169
+    locked: 0
+  - name: Guard
+    uniqueID: 1317226055
+    locked: 0
+  - name: TutorialUi
+    uniqueID: 10112003
     locked: 0
   - name: Player
     uniqueID: 3155975563

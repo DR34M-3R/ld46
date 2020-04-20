@@ -11,7 +11,6 @@ public class Camera2D : MonoBehaviour {
 	private Camera cam;
 	private Transform player;
 	private static Camera2D _internal;
-	private SpriteRenderer bounds;
 
 	void Awake()
 	{

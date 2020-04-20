@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using core;
 using Events;
 using UnityEngine;
-using UnityEngine.Apple.ReplayKit;
 
 public class EventSystem : MonoBehaviour
 {

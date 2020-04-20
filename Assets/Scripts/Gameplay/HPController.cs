@@ -31,12 +31,13 @@ namespace Gameplay
             {
                 _currentHP = _stats.hp;
             }
-            
             _eventSystem.Dispatch(HPEvent.CHANGED, _currentHP);
+
         }
 
         void OnDamageReceived(EventData e)
         {
+                Debug.LogWarning(gameObject.name + "Damaged");
             if (_currentHP > 0)
             {
                 float hpCount = Convert.ToSingle(e.Data);

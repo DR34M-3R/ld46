@@ -17,6 +17,10 @@ public class SoundController : MonoBehaviour
         {
             _audioSource = gameObject.AddComponent<AudioSource>();
         }
+        else
+        {
+           _audioSource = GetComponent<AudioSource>();
+        }
 
         _eventSystem = GetComponent<EventSystem>();
         _eventSystem.AddListener(EventSystem.BROADCAST, TryPlaySound);
