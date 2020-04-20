@@ -12,6 +12,7 @@ public class AIInputController : MonoBehaviour
     public float IntervalBetweenAttacks = 3f;
     public float AttackDistance = 2f;
     public float PatrolZoneRadius = 10f;
+    public string EnemyTag = "Player";
     private Vector3 _startPoint;
     private List<AITask> _taskList;
 
@@ -27,6 +28,7 @@ public class AIInputController : MonoBehaviour
         taskContext.PatrolZoneRadius = PatrolZoneRadius;
         taskContext.VisionDistance = VisionDistance;
         taskContext.CanContinueChasing = CanContinueChasing;
+        taskContext.EnemyTag = EnemyTag;
 
         _taskList = new List<AITask>()
         {
@@ -162,7 +164,7 @@ public class AttackAITask : AITask
 
         if (hit.collider != null)
         {
-            if (hit.collider.TryGetComponent(out HPController hpController))
+            if (hit.collider.TryGetComponent(out HPController hpController) && hit.collider.gameObject.CompareTag(_context.EnemyTag))
             {
                 Debug.DrawRay(_context.GameObject.transform.position, dir * distance, Color.red, 0.3f);
                 return hit.collider.gameObject;
@@ -231,7 +233,7 @@ public class GotoEnemyAITask : AITask
 
         if (hit.collider != null)
         {
-            if (hit.collider.TryGetComponent(out HPController hpController))
+            if (hit.collider.TryGetComponent(out HPController hpController) && hit.collider.gameObject.CompareTag(_context.EnemyTag))
             {
                 Debug.DrawRay(_context.GameObject.transform.position, dir * distance, Color.red, 0.3f);
                 return hit.collider.gameObject;
@@ -299,6 +301,7 @@ public class TaskContext
     public float PatrolZoneRadius;
     public float VisionDistance;
     public bool CanContinueChasing;
+    public string EnemyTag;
 
     public TaskContext()
     {
