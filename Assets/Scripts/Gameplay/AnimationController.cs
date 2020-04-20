@@ -12,6 +12,7 @@ public class AnimationController : MonoBehaviour
     private EventSystem _eventSystem;
     private Animator _animator;
     private string _animation;
+    private string _lastAnimation;
 
     void Start()
     {
@@ -25,7 +26,14 @@ public class AnimationController : MonoBehaviour
         var anim = animationList.FirstOrDefault(soundData => soundData.eventType == e.Type);
         if (anim != null)
         {
-            _animation = anim.animationName;
+            if (!anim.useParam)
+            {
+                _animation = anim.animationName;
+            }
+            else
+            {
+                _animator.SetBool(anim.animationName, anim.param);
+            }
         }
     }
 
@@ -42,6 +50,8 @@ public class AnimationController : MonoBehaviour
 [System.Serializable]
 public class AnimationByEvent
 {
+    public bool useParam;
+    public bool param;
     public string eventType;
     public string animationName;
 }
