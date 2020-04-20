@@ -21,7 +21,7 @@ public class PlayerDeathController : MonoBehaviour
     private void OnPlayerDied(EventData e)
     {
         StartCoroutine(LoadGameOver());
-        Time.timeScale = 0.25f;
+        Time.timeScale = 0;
         
 
     }
