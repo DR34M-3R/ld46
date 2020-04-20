@@ -46,15 +46,12 @@
             <e p="GameOverView.cs" t="Include" />
           </e>
           <e p="Gameplay" t="Include">
+            <e p="AIInputController.cs" t="Include" />
             <e p="AnimationController.cs" t="Include" />
             <e p="AttackActionController.cs" t="Include" />
-<<<<<<< Updated upstream
-=======
             <e p="Character" t="Include">
               <e p="HealthSystem.cs" t="Include" />
-              <e p="PlayerDeathController.cs" t="Include" />
             </e>
->>>>>>> Stashed changes
             <e p="HPController.cs" t="Include" />
             <e p="MovementController.cs" t="Include" />
             <e p="PlayerDeathController.cs" t="Include" />

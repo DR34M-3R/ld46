@@ -26,6 +26,7 @@ public class MovementController : MonoBehaviour
         _eventSystem = GetComponent<EventSystem>();
 
         _eventSystem.AddListener(MovementEvent.JUMP, Jump);
+        _eventSystem.AddListener(MovementEvent.FLIP, Flip);
         _eventSystem.AddListener(MovementEvent.MOVING_LEFT_STARTED, OnMovingDirectionChanged);
         _eventSystem.AddListener(MovementEvent.MOVING_STOPPED, OnMovingDirectionChanged);
         _eventSystem.AddListener(MovementEvent.MOVING_RIGHT_STARTED, OnMovingDirectionChanged);
@@ -95,14 +96,18 @@ public class MovementController : MonoBehaviour
         }
     }
 
-    private void Jump(EventData e)
+    private void Jump(EventData e = null)
     {
         if (_grounded)
         {
             _wannaJump = true;
         }
     }
-
+    
+    private void Flip(EventData e = null)
+    {
+        FlipByDirection();
+    }
 
     private void FlipByDirection()
     {
@@ -111,5 +116,15 @@ public class MovementController : MonoBehaviour
         var scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+
+    public bool GetIsFlipped()
+    {
+        return _flipped;
+    }
+    
+    public int GetDirection()
+    {
+        return _flipped ? -1 : 1;
     }
 }

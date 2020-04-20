@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class AnimationController : MonoBehaviour
 
     private EventSystem _eventSystem;
     private Animator _animator;
+    private string _animation;
 
     void Start()
     {
@@ -23,7 +25,16 @@ public class AnimationController : MonoBehaviour
         var anim = animationList.FirstOrDefault(soundData => soundData.eventType == e.Type);
         if (anim != null)
         {
-            _animator.Play(anim.animationName);
+            _animation = anim.animationName;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (_animation != null)
+        {
+            _animator.Play(_animation);
+            _animation = null;
         }
     }
 }
