@@ -7,6 +7,11 @@ using UnityEngine;
 
 public class AIInputController : MonoBehaviour
 {
+    public float VisionDistance = 10f;
+    public bool CanContinueChasing;
+    public float IntervalBetweenAttacks = 3f;
+    public float AttackDistance = 2f;
+    public float PatrolZoneRadius = 10f;
     private Vector3 _startPoint;
     private List<AITask> _taskList;
 
@@ -14,19 +19,22 @@ public class AIInputController : MonoBehaviour
     {
         var taskContext = new TaskContext();
 
-        taskContext.GameObject = gameObject;
         _startPoint = transform.position;
+        taskContext.GameObject = gameObject;
         taskContext.StartPoint = _startPoint;
+        taskContext.IntervalBetweenAttacks = IntervalBetweenAttacks;
+        taskContext.AttackDistance = AttackDistance;
+        taskContext.PatrolZoneRadius = PatrolZoneRadius;
+        taskContext.VisionDistance = VisionDistance;
+        taskContext.CanContinueChasing = CanContinueChasing;
 
         _taskList = new List<AITask>()
         {
             new AttackAITask(taskContext),
             new GotoEnemyAITask(taskContext),
             new GotoWayPointAITask(taskContext),
-        };    
-
+        };
     }
-
 
     private AITask GetActualTask()
     {
@@ -45,7 +53,7 @@ public class AIInputController : MonoBehaviour
                 task.InvokeStop();
             }
         }
-        
+
         actualTask.InvokeStart();
         actualTask.InvokeProcess();
     }
@@ -108,14 +116,14 @@ public class AITask
 public class AttackAITask : AITask
 {
     private float lastAttackTime;
-    
+
     public AttackAITask(TaskContext taskContext) : base(taskContext)
     {
     }
 
     public override void Start()
     {
-        lastAttackTime = 3f;
+        lastAttackTime = 0;
     }
 
     public override void Stop()
@@ -124,25 +132,33 @@ public class AttackAITask : AITask
 
     public override void Process()
     {
-        lastAttackTime += Time.deltaTime;
-
-        if (lastAttackTime > 3f)
+        if (!CanAttack())
+        {
+            InvokeStop();
+            return;
+        }
+        
+        if (lastAttackTime <= 0)
         {
             Attack();
         }
+
+        lastAttackTime -= Time.deltaTime;
     }
-    
+
     private void Attack()
     {
         _context.GameObject.GetComponent<EventSystem>().Dispatch(ActionEvent.ATTACK);
-        lastAttackTime = 0;
+        lastAttackTime = _context.IntervalBetweenAttacks;
     }
-    
+
     private GameObject GetEnemy(float distance)
     {
-        var dir = new Vector2( _context.GameObject.GetComponent<MovementController>().GetDirection(), 0);
-        var hit = Physics2D.Raycast((_context.GameObject.transform.position + new Vector3(dir.x * 1.5f,0,0)), dir, distance);
-        Debug.DrawRay((_context.GameObject.transform.position + new Vector3(dir.x * 1.5f,0,0)), dir * distance, Color.green, 0.2f);
+        var dir = new Vector2(_context.GameObject.GetComponent<MovementController>().GetDirection(), 0);
+        var hit = Physics2D.Raycast((_context.GameObject.transform.position + new Vector3(dir.x * 1.5f, 0, 0)), dir,
+            distance);
+        Debug.DrawRay((_context.GameObject.transform.position + new Vector3(dir.x * 1.5f, 0, 0)), dir * distance,
+            Color.green, 0.2f);
 
         if (hit.collider != null)
         {
@@ -156,23 +172,29 @@ public class AttackAITask : AITask
         return null;
     }
 
+    private bool CanAttack()
+    {
+        return GetEnemy(_context.AttackDistance) != null;
+    }
+
     public override bool CanStart()
     {
-        return GetEnemy(2f) != null;
+        return CanAttack();
     }
 }
 
 public class GotoEnemyAITask : AITask
 {
     private GameObject _enemy;
+
     public GotoEnemyAITask(TaskContext taskContext) : base(taskContext)
     {
     }
 
     public override void Start()
     {
-        _enemy = GetEnemy(10);
-        
+        _enemy = GetEnemy(_context.VisionDistance);
+
         _context.GameObject.GetComponent<EventSystem>().Dispatch(
             (_enemy.transform.position.x < _context.GameObject.transform.position.x)
                 ? MovementEvent.MOVING_LEFT_STARTED
@@ -186,7 +208,8 @@ public class GotoEnemyAITask : AITask
 
     public override void Process()
     {
-        if (!IsEnemyOnMyTerritoty(_enemy) || Vector3.Distance(_enemy.transform.position, _context.GameObject.transform.position) < 2.5f)
+        if (!IsEnemyOnMyTerritoty(_enemy) && !_context.CanContinueChasing ||
+            Vector3.Distance(_enemy.transform.position, _context.GameObject.transform.position) < 2.5f)
         {
             InvokeStop();
         }
@@ -194,15 +217,17 @@ public class GotoEnemyAITask : AITask
 
     public override bool CanStart()
     {
-        var enemy = GetEnemy(10);
-        return enemy != null && IsEnemyOnMyTerritoty(enemy);
+        var enemy = GetEnemy(_context.VisionDistance);
+        return enemy != null && _context.CanContinueChasing || enemy != null && IsEnemyOnMyTerritoty(enemy) && !_context.CanContinueChasing;
     }
-    
+
     private GameObject GetEnemy(float distance)
     {
-        var dir = new Vector2( _context.GameObject.GetComponent<MovementController>().GetDirection(), 0);
-        var hit = Physics2D.Raycast((_context.GameObject.transform.position + new Vector3(dir.x * 1.5f,0,0)), dir, distance);
-        Debug.DrawRay((_context.GameObject.transform.position + new Vector3(dir.x * 1.5f,0,0)), dir * distance, Color.green, 0.2f);
+        var dir = new Vector2(_context.GameObject.GetComponent<MovementController>().GetDirection(), 0);
+        var hit = Physics2D.Raycast((_context.GameObject.transform.position + new Vector3(dir.x * 1.5f, 0, 0)), dir,
+            distance);
+        Debug.DrawRay((_context.GameObject.transform.position + new Vector3(dir.x * 1.5f, 0, 0)), dir * distance,
+            Color.green, 0.2f);
 
         if (hit.collider != null)
         {
@@ -218,7 +243,7 @@ public class GotoEnemyAITask : AITask
 
     private bool IsEnemyOnMyTerritoty(GameObject enemy)
     {
-        return Vector3.Distance(enemy.transform.position, _context.StartPoint) < 10f;
+        return Vector3.Distance(enemy.transform.position, _context.StartPoint) < _context.PatrolZoneRadius;
     }
 }
 
@@ -233,13 +258,13 @@ public class GotoWayPointAITask : AITask
     public override void Start()
     {
         _wayPoint = _context.StartPoint;
-        _wayPoint.x +=  -10;
-        
-        if (Vector3.Distance(_context.GameObject.transform.position, _wayPoint) < 10f)
+        _wayPoint.x += -_context.PatrolZoneRadius;
+
+        if (Vector3.Distance(_context.GameObject.transform.position, _wayPoint) < _context.PatrolZoneRadius)
         {
-            _wayPoint.x += 20;
+            _wayPoint.x += _context.PatrolZoneRadius * 2;
         }
-        
+
         _context.GameObject.GetComponent<EventSystem>().Dispatch(
             (_wayPoint.x < _context.StartPoint.x)
                 ? MovementEvent.MOVING_LEFT_STARTED
@@ -269,6 +294,11 @@ public class TaskContext
 {
     public GameObject GameObject;
     public Vector3 StartPoint;
+    public float AttackDistance;
+    public float IntervalBetweenAttacks;
+    public float PatrolZoneRadius;
+    public float VisionDistance;
+    public bool CanContinueChasing;
 
     public TaskContext()
     {

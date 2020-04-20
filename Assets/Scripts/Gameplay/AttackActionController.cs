@@ -28,23 +28,7 @@ public class AttackActionController : MonoBehaviour
 
     private void Attack(EventData e)
     {
-
-        var eventTmp = GetEventSystem();
-        Debug.LogWarning(eventTmp);
-        if (eventTmp == null)
-            return;
-        if (eventTmp.gameObject.CompareTag("Guard"))
-        {
-            eventTmp.GetComponent<Stats>().hp -= _stats.Damage;
-            if (eventTmp.GetComponent<Stats>().hp <= 0)
-            {
-                eventTmp.Dispatch(HPEvent.DIED);
-                //Destroy(eventTmp.gameObject,);
-            }
-        }
-        
-        eventTmp.Dispatch(HPEvent.DAMAGE_RECEIVED, _stats.Damage);
-        Debug.DrawRay(Positions[0].position, new Vector2(transform.localScale.x, 0)  * Distance, Color.red, 0.3f);
+        GetEventSystem()?.Dispatch(HPEvent.DAMAGE_RECEIVED, _stats.Damage);
     }
 
     private EventSystem GetEventSystem()

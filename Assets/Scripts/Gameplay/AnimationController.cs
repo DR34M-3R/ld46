@@ -33,7 +33,6 @@ public class AnimationController : MonoBehaviour
     {
         if (_animation != null)
         {
-
             _animator.Play(_animation);
             _animation = null;
         }
