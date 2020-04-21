@@ -15,6 +15,8 @@ public class TheEnd : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!other.gameObject.CompareTag("Player"))
+            return;
         Time.timeScale = 0;
         _panel.SetActive(true);
     }
